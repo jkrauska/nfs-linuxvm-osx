@@ -2,6 +2,8 @@
 Some notes on connecting to a linux vm running on an osx host
 
 ## Problem Statement:
+I want to use a GUI editor in OSX to directly edit code I want to compile and run in Linux.
+
 As much as a like terminal based text editors, vscode and atom are pretty nifty.  Most of my desktoping is done in osx. Most of my servering is done in linux.  I want tight loops between code edits in osx land and compiles and running programs in linux land.  For prototyping most of my work is done on local linux vms running in virtual box or vmware fusion, and that's the nature of most of the solutions, but they could also be applied to accessing servers on the internet.
 
 
