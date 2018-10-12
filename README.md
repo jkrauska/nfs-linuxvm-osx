@@ -2,7 +2,7 @@
 Some notes on connecting to a linux vm running on an osx host
 
 ## Problem Statement:
-As much as a like terminal based text editors, vscode and atom are pretty nifty.  Most of my desktoping is done in osx. Most of my servering is done in linux.  I want tight loops between code edits in osx land and compiles and running programs in linux land.  For prototyping most of my work is done on local linux vms running in virtual box or vmware fusion, and that's the nature of most of the solutions, but they could also be appied to accessing servers on the internet.
+As much as a like terminal based text editors, vscode and atom are pretty nifty.  Most of my desktoping is done in osx. Most of my servering is done in linux.  I want tight loops between code edits in osx land and compiles and running programs in linux land.  For prototyping most of my work is done on local linux vms running in virtual box or vmware fusion, and that's the nature of most of the solutions, but they could also be applied to accessing servers on the internet.
 
 
 ## Things tried:
@@ -28,8 +28,8 @@ Described well here: https://serverfault.com/questions/716350/mount-nfs-volume-o
 
 ## Notes:
 
-I typically make my VMs operate in bridged mode.  For added security I create a second virtual nic on the vm that is 'Private To My Mac'.  This provides a dedicated /24 that I can use for my NFS export without worry about it be exposed on my local lan as when in bridged mode.
+I typically make my VMs operate in bridged mode.  For added security I create a second virtual nic on the vm that is 'Private To My Mac'.  This provides a dedicated /24 that I can use for my NFS export without worry about it be exposed on my local lan as when in bridged mode. It also means that my nfs mounts don't change when my IP addressing chages on the bridged interfaces.
 
-I'm not using nfs security. I'd like to, but I haven't looked in to it.
+I'm not using nfs security. I'd like to, but I haven't looked in to it, and I'm exporting/mounting on lan isolated to my machine.
 
 I'm not using nfsv4.  Previous notes suggest it can crash osx.  Would like to try anyway. nfsv4 should be faster?
